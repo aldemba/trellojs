@@ -1,0 +1,306 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+margin: 0;
+padding: 0;
+/* background-color: silver; */
+}
+
+
+#container{
+height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+position: relative;
+overflow: hidden;
+background-image: url(./nature.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+#header{
+height: 14%;
+background-color: antiquewhite;
+display: flex;
+flex-direction: column;
+gap: 9%;
+padding-left: 1rem;
+transform: translateY(-100%);
+transition: 1s all ease-in;
+}
+
+#header.togle{
+transition: 1s all ease-in;
+transform: translateY(0);
+}
+
+.gene{
+    display: flex;
+    /* width: 100%;   */
+    align-items: center;   
+    padding: 0.5rem 3rem 0 3rem;
+    gap: 1rem;
+    justify-content: flex-start;
+
+}
+
+/* .togle{
+    display: block;
+} */
+
+
+.bouton{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5%;
+    text-align: start;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    border-left: 5px solid;
+    border-radius: 5px;
+
+}
+
+.bouton:hover{
+    background-color: skyblue;
+}
+
+.entete-texte{
+ display: flex;
+ flex-direction: column;
+ border: 2px solid;
+ height: 81vh;
+ width: 20%;
+}
+  
+.span{
+text-align: center;
+cursor: pointer;
+padding: 0.5rem;
+border: 1px solid black;
+color:black;
+font-weight: bolder;
+
+}
+
+.input:focus{
+    outline: none;
+}
+
+#formulaire{
+    border: 2px solid;
+    height: 70vh;
+    width: 30%;
+    margin-bottom: 8%;
+    margin-left: 9%;
+    background-color: white;
+}
+#entete{
+    background-color: burlywood;
+    display: flex;
+
+}
+
+#entete button{
+  height: 3.3rem;
+  position: absolute;
+  left: 90%;
+  background-color: burlywood;
+  border: none;
+  font-weight: bolder;
+
+}
+
+#entete h3{
+    color: white;
+    margin-bottom: 3%;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+form p{
+    margin-left: 10%;
+}
+
+textarea{
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    max-height: 18vh;
+    max-width: 23.8vw;
+    min-width: 23.8vw;
+    min-height: 18vh;
+}
+
+.lab{
+margin: 1% 10%;
+
+}
+
+.inp{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.btn{
+background-color: green;
+color: white;
+width: 80%;
+margin: 5% 10%;
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    visibility: hidden;
+
+}
+
+
+#formulaire{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 48%;
+    left: 40%;
+    animation-duration: 3s;
+
+}
+
+.une-tache{
+display: flex;
+flex-direction: column;
+align-items: center;
+/* border-radius: 1.5vh; */
+height: 9.5vh;
+width: 100%;
+overflow-y: auto;
+/* background-color: white; */
+border: 2px solid;
+/* font-size: 1em; */
+
+}
+
+.button-tache{
+background-color: transparent;
+cursor: pointer;
+
+
+}
+
+
+.delete-task{
+    /* background-color:red; */
+}
+
+.lecorps{
+    height: 99%;
+    background-image: url(./logo.png);
+    background-size: 34.5vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: auto;
+
+
+}
+
+/* #droite{
+left: 19.9%;
+}
+
+#gauche{
+    left: 3.5%;
+} */
+
+.block{
+    display: flex;
+    height: 10vh;
+    margin: 7% 5%;
+    width: 90%;
+    border: 2px solid;
+    background-color: transparent;
+}
+
+.show{
+position: absolute;
+background-color: blanchedalmond;
+height: 2rem;
+width: 2rem;
+border-radius: 50%;
+top: 93%;
+left:0;
+font-size: 1.5em;
+
+}
+
+.supprime{
+  margin-bottom: 1vh;
+  float: left;
+  width: 2vw;
+  height: 3vh;
+  background-color:transparent;
+}
+
+.restore-task{
+    /* background-color: green; */
+    font-size: 1em;
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 0.5em;
+    font-weight: bolder;
+}
+
+#corbeille{
+    position: absolute;
+    top: 1%;
+    left: 85%;
+    width: 15vw;
+    height: 98vh;
+    border: 2px solid;
+    overflow-y: auto;
+    background-color: antiquewhite;
+   transform: translateX(100%);
+    transition: 1s all ease-out;
+    overflow-y: auto;
+
+}
+
+#corbeille.show-corbeille{
+    transform: translateX(0);
+    transition: 1s all ease-in;
+}
+
+.divarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.div2{
+    display: flex;
+    flex-direction: column;
+}
+#c1{
+    
+}
+
+.entete-texte:first-child .lecorps .block .button-tache{
+    visibility: hidden;
+}
+.entete-texte:last-child .lecorps .block .button-tache{
+    visibility: hidden;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trello.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <button class="bouton" id="colonne">+ Colonne</button>
+            <button class="bouton" id="note">+ Note</button>
+            <button class="bouton" id="btn-corbeille">- corbeille</button>
+        </div>
+
+        <div class="gene">
+            <!-- <div class="entete-texte">
+                <span class="span"></span>
+                <div class="lecorps" >
+
+                <div class="block">
+                    <button class="button-tache" id="gauche"><<</button>
+                    <div class="une-tache"></div>
+                    <button class="button-tache" id="droite">>></button>
+                </div>
+            </div>
+            </div> -->
+
+            <button class="show">+</button>
+
+        </div>
+        <div id="corbeille"></div>
+        
+
+    </div>
+<div class="modal">
+    <div id="formulaire">
+        <div id="entete">
+            <h3>Nouvelle Tâche</h3>
+            <button id="btnx">X</button>
+        </div>
+       <form id="vrai-formulaire" action="">
+         <p>Remplir les informations de la nouvelle tâche</p>
+            <label for="" class="lab">Tâche</label>
+           <textarea name="" id="" cols="21" rows="7"></textarea>
+           <label class="lab" for="">Date</label>
+           <input class="inp" type="date">
+           <label class="lab" for="">Heure de début</label>
+           <input class="inp" type="time">
+           <label class="lab" for="">Heure de Fin</label>
+           <input class="inp" type="time">
+           <button type="button" class="btn">Ajouter</button>
+       </form>
+    </div>
+</div>
+
+
+
+
+<script src="./trello.js"></script> 
+</body>
+</html>
